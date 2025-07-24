@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Cyber Trap</title>
+</head>
+<body>
+  <!-- ✨ Stars Animation Container -->
+  <div class="stars"></div>
+
+  <header>
+    <img src="Logo1.png" alt="Cyber Logo" class="logo" />
+    <h1>Cyber Trap</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to the Future of Digital Defense</h2>
+    <p>Cybersecurity is the shield of the digital era. Learn how to defend against threats, stay aware, and become a cyber guardian.</p>
+  </section>
+
+  <section class="media-section">
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/ey4dXseAODE" frameborder="0" allowfullscreen></iframe>
+    <img src="asa.jpg" alt="Cyber Threat Awareness" />
+  </section>
+
+  <section class="buttons-section">
+    <h3>Common Cyber Attacks & Defenses</h3>
+    <button onclick="window.open('https://www.phishing.org/', '_blank')">Phishing</button>
+    <button onclick="window.open('https://www.kaspersky.com/resource-center/threats/malware-explained', '_blank')">Malware</button>
+    <button onclick="window.open('https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/', '_blank')">DDoS</button>
+    <button onclick="window.open('https://www.imperva.com/learn/application-security/man-in-the-middle-attack/', '_blank')">MITM</button>
+    <button onclick="window.open('https://www.fortinet.com/resources/cyberglossary/brute-force-attack', '_blank')">Brute Force</button>
+    <button onclick="window.open('https://www.cisco.com/c/en/us/products/security/vpn-endpoint-security-clients/what-is-vpn.html', '_blank')">VPN</button>
+    <button onclick="window.open('https://dfi.wa.gov/consumers/protecting-yourself-cyber-attacks', '_blank')">Protect Yourself</button>
+  </section>
+
+  <div class="threeD-box">
+    <div class="cube">
+      <div class="front">Firewall</div>
+      <div class="back">Encryption</div>
+      <div class="right">AI Threat Detection</div>
+      <div class="left">Zero Trust</div>
+      <div class="top">Awareness</div>
+      <div class="bottom">VPN</div>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <h2>Rate This Cyber Security Project</h2>
+    <p>Your opinion helps us improve!</p>
+    <p>Scan the QR code or click below:</p>
+    <img src="frame.png" class="QR" alt="">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7zXuJdZRPL-Pa2ebgkWX32AafQGtNlLE2uxtpwaj2lJYdRg/viewform?usp=header" target="_blank">
+      <button>Rate Now</button>
+    </a>
+  </div>
+
+  <script>
+    // Star animation generator
+    window.addEventListener("DOMContentLoaded", () => {
+      const starsContainer = document.querySelector(".stars");
+      const count = 50;
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        const tailLength = (Math.random() * 2.5 + 5).toFixed(2) + "em";
+        const topOffset = (Math.random() * 100).toFixed(2) + "vh";
+        const fallDuration = (Math.random() * 6 + 6).toFixed(2) + "s";
+        const fallDelay = (Math.random() * 10).toFixed(2) + "s";
+        star.style.setProperty("--star-tail-length", tailLength);
+        star.style.setProperty("--top-offset", topOffset);
+        star.style.setProperty("--fall-duration", fallDuration);
+        star.style.setProperty("--fall-delay", fallDelay);
+        star.style.setProperty("--star-width", "0.7em");
+        star.style.setProperty("--star-tail-height", "2px");
+        starsContainer.appendChild(star);
+      }
+    });
+  </script>
+</body>
+</html>

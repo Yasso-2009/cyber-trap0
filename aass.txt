@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.scss">
+  <title>Cyber Trap</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right,black, #432390);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    header img.logo {
+      width: 100px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .media-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .media-section iframe,
+    .media-section img {
+      max-width: 400px;
+      border: 3px solid #00ffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffff;
+      margin: 20px;
+    }
+
+    .buttons-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .buttons-section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .buttons-section button {
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 1rem;
+      color: #fff;
+      background: #111;
+      border: 2px solid #00ffff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buttons-section button:hover {
+      background: #00ffff;
+      color: #111;
+    }
+
+    .threeD-box {
+      width: 90vw;
+      max-width: 300px;
+      height: 90vw;
+      max-height: 300px;
+      margin: 50px auto;
+      perspective: 1000px;
+    }
+
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 10s infinite linear;
+    }
+
+    .cube div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 255, 255, 0.1);
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff;
+      text-align: center;
+      line-height: 270px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .front  { transform: translateZ(150px); }
+    .back   { transform: rotateY(180deg) translateZ(150px); }
+    .right  { transform: rotateY(90deg) translateZ(150px); }
+    .left   { transform: rotateY(-90deg) translateZ(150px); }
+    .top    { transform: rotateX(90deg) translateZ(150px); }
+    .bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+    @keyframes rotate {
+      from { transform: rotateX(0deg) rotateY(0deg); }
+      to { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    @media (max-width: 400px) {
+      .cube div {
+        line-height: 60vw;
+      }
+    }
+
+    .rating-container {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .qr-code {
+      width: 150px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .rating-container button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      background-color: #00ff99;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .rating-container button:hover {
+      background-color: #00cc77;
+    }
+    .QR{
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo1.png" alt="Cyber Logo" class="logo" />
+    <h1>Cyber Trap</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to the Future of Digital Defense</h2>
+    <p>Cybersecurity is the shield of the digital era. Learn how to defend against threats, stay aware, and become a cyber guardian.</p>
+  </section>
+
+  <section class="media-section">
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/ey4dXseAODE" frameborder="0" allowfullscreen></iframe>
+    <img src="asa.jpg" alt="Cyber Threat Awareness" />
+  </section>
+
+  <section class="buttons-section">
+    <h3>Common Cyber Attacks & Defenses</h3>
+    <button onclick="window.open('https://www.phishing.org/', '_blank')">Phishing</button>
+    <button onclick="window.open('https://www.kaspersky.com/resource-center/threats/malware-explained', '_blank')">Malware</button>
+    <button onclick="window.open('https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/', '_blank')">DDoS</button>
+    <button onclick="window.open('https://www.imperva.com/learn/application-security/man-in-the-middle-attack/', '_blank')">MITM</button>
+    <button onclick="window.open('https://www.techtarget.com/searchsecurity/definition/brute-force-attack', '_blank')">Brute Force</button>
+    <button onclick="window.open('https://www.cisco.com/c/en/us/products/security/vpn-endpoint-security-clients/what-is-vpn.html', '_blank')">VPN</button>
+    <button onclick="window.open('https://www.waynebankonline.com/protect-yourself-from-cyber-attacks/', '_blank')">Protect Yourself</button>
+  </section>
+
+  <div class="threeD-box">
+    <div class="cube">
+      <div class="front">Firewall</div>
+      <div class="back">Encryption</div>
+      <div class="right">AI Threat Detection</div>
+      <div class="left">Zero Trust</div>
+      <div class="top">Awareness</div>
+      <div class="bottom">VPN</div>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <h2>Rate This Cyber Security Project</h2>
+    <p>Your opinion helps us improve!</p>
+    <p>Scan the QR code or click below:</p>
+  <img src="frame.png" class="QR" alt="">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7zXuJdZRPL-Pa2ebgkWX32AafQGtNlLE2uxtpwaj2lJYdRg/viewform?usp=header" target="_blank">
+      <button>Rate Now</button>
+    </a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="Logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.scss">
+  <title>Cyber Trap</title>
+
+  <style>
+    /* Your existing styles (unchanged) */
+    /* ... [Your full CSS from before remains here] ... */
+
+    /* === Star Animation Styles === */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      transform: rotate(-45deg);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      top: var(--top-offset);
+      left: 0;
+      width: var(--star-tail-length);
+      height: var(--star-tail-height);
+      background: linear-gradient(45deg, #00ffff, transparent);
+      border-radius: 50%;
+      filter: drop-shadow(0 0 6px #00ffff);
+      transform: translate3d(104em, 0, 0);
+      animation: fall var(--fall-duration) var(--fall-delay) linear infinite, 
+                 tail-fade var(--fall-duration) var(--fall-delay) ease-out infinite;
+    }
+
+    .star::before, .star::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(var(--star-width, 1em) / -2);
+      width: var(--star-width, 1em);
+      height: 100%;
+      background: linear-gradient(45deg, transparent, #00ffff, transparent);
+      border-radius: inherit;
+      animation: blink 2s linear infinite;
+    }
+
+    .star::before { transform: rotate(45deg); }
+    .star::after  { transform: rotate(-45deg); }
+
+    @keyframes fall {
+      to {
+        transform: translate3d(-30em, 0, 0);
+      }
+    }
+
+    @keyframes tail-fade {
+      0%, 50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+      }
+      70%, 80% {
+        width: 0;
+        opacity: 0.4;
+      }
+      100% {
+        width: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0.6;
+      }
+    }
+  </style>
+  <!-- ✨ Stars Animation Container -->
+  <div class="stars"></div>
+
+  <header>
+    <img src="Logo1.png" alt="Cyber Logo" class="logo" />
+    <h1>Cyber Trap</h1>
+  </header>
+
+  <!-- Your full content remains the same -->
+  <!-- ... -->
+</body>
+</html>
+  <script>
+    // Dynamically create stars with random properties
+    window.addEventListener("DOMContentLoaded", () => {
+      const starsContainer = document.querySelector(".stars");
+      const count = 50;
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        const tailLength = (Math.random() * 2.5 + 5).toFixed(2) + "em";
+        const topOffset = (Math.random() * 100).toFixed(2) + "vh";
+        const fallDuration = (Math.random() * 6 + 6).toFixed(2) + "s";
+        const fallDelay = (Math.random() * 10).toFixed(2) + "s";
+        star.style.setProperty("--star-tail-length", tailLength);
+        star.style.setProperty("--top-offset", topOffset);
+        star.style.setProperty("--fall-duration", fallDuration);
+        star.style.setProperty("--fall-delay", fallDelay);
+        star.style.setProperty("--star-width", "0.7em");
+        star.style.setProperty("--star-tail-height", "2px");
+        starsContainer.appendChild(star);
+      }
+    });
+  </script>
+</head>
+
+<body>
+  
