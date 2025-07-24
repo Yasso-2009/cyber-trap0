@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, black, #432390);
   color: white;
   overflow-x: hidden;
 }
@@ -240,4 +239,32 @@ header h1 {
   50% {
     opacity: 0.6;
   }
+}
+
+
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #432390, #432390, black, #432390,black);
+    background-size: 600% 600%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.Bot{
+  margin-top: 20px;
 }
